@@ -4,12 +4,14 @@
 #include <string.h>
 #include <mutex>
 #include <vector>
+#include <algorithm>
 #include <arpa/inet.h>
 #include "threadPool.hh"
 
+
 using namespace std;
 
-vector<unsigned int> fdSet;
+vector<int> fdSet;
 mutex mtx;
 char commonDataArea[1024];
 
@@ -84,8 +86,7 @@ void communication(int cfd)
         }
     }
 
-    int tmpcfd = cfd;
-    auto it = std::find(fdSet.begin(), fdSet.end(), tmpcfd);
+    auto it = std::find(fdSet.begin(), fdSet.end(), cfd);
     if (it != fdSet.end()) {
         fdSet.erase(it);
     }
