@@ -25,17 +25,3 @@ make
 ```shell
 ./client
 ```
-
-### 效果图
-
-客户端A
-
-![](C:\Users\Liu\AppData\Roaming\marktext\images\2025-01-11-17-23-15-image.png)
-
-客户端B
-
-![](C:\Users\Liu\AppData\Roaming\marktext\images\2025-01-11-17-23-33-image.png)
-
-服务器端
-
-![](C:\Users\Liu\AppData\Roaming\marktext\images\2025-01-11-17-24-00-image.png)
